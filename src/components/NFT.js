@@ -4,6 +4,11 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const NFT = ({ name, price, token_symbol, usd_equiv, os_url, img_url }) => {
+  const cFormatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
   return (
     <StyledNFT>
         <a href={os_url}>
@@ -12,7 +17,7 @@ const NFT = ({ name, price, token_symbol, usd_equiv, os_url, img_url }) => {
                 <img src={img_url} alt={name} />
             </div>
             <p className='salePrice'>{price} {token_symbol}</p>
-            <p>~ ${Math.round(usd_equiv * price * 100)/100}</p>
+            <p>~ {cFormatter.format(Math.round(usd_equiv * price * 100)/100)}</p>
         </a>
     </StyledNFT>
   );
