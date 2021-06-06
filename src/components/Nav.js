@@ -5,9 +5,9 @@ import Container from 'react-bootstrap/Container';
 
 const Nav = () => {
   return (
-    <Navbar bg="light" variant="light">
+    <Navbar bg="light" variant="light" style={{'borderBottom': '5px solid rgb(208,216,254)'}}>
         <Container>
-            <Navbar.Brand style={{'color': 'rgb(39, 41, 45)'}}>Web3 Dashboard</Navbar.Brand>
+            <Navbar.Brand style={{'color': 'rgb(44, 45, 49)'}}>Web3 Dashboard</Navbar.Brand>
         </Container>
     </Navbar>
   );
