@@ -37,7 +37,7 @@ const Eth = () => {
     const formatter = new Intl.NumberFormat('en-US', {});
 
     return (
-        <div>
+        <div style={{'marginTop': '1rem'}}>
             <SubBar>
                 <img src={eth} alt=""/>
                 <h3>Ethereum Snapshot</h3>

@@ -54,7 +54,7 @@ const Defi = () => {
   });
 
   return (
-    <div className="Defi" style={{'marginTop': '-3rem'}}>
+    <div className="Defi" style={{'marginTop': '1rem'}}>
       <SubBar>
         <h3>Top liquidity pools on &nbsp;</h3>
         <img src={uni} alt="OpenSea"/>

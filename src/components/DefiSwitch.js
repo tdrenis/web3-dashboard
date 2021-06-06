@@ -2,14 +2,16 @@ import React from "react";
 //Styling and Animation
 import styled from "styled-components";
 import { motion } from "framer-motion";
+// Routing 
+import {Link} from "react-router-dom";
 
 const DefiSwitch = () => {
   return (
     <SwitchContainer>
       <Switch>
-          <p className='first'>Home</p>
-          <p className='second'>NFTs</p>
-          <p className='third'>DeFi</p>
+          <p className='first'><Link to="/">Home</Link></p>
+          <p className='second'><Link to="/nfts">NFTs</Link></p>
+          <p className='third'><Link to="/defi">DeFi</Link></p>
       </Switch>
     </SwitchContainer>
   );
@@ -34,6 +36,9 @@ const Switch = styled(motion.div)`
     margin: 0.05rem 0.5rem;
     font-size: 18px;
     padding: 2px 12px;
+  }
+  a:hover { 
+    color: rgb(88, 91, 104);
   }
   .third { 
     background: white;

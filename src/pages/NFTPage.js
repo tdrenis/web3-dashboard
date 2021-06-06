@@ -5,7 +5,7 @@ import NFTSwitch from "../components/NFTSwitch";
 
 const NFTPage = () => {
   return (
-    <div className="NFTs" style={{'marginTop': '-3rem'}}>
+    <div className="NFTs" style={{'marginTop': '3rem'}}>
         <NFTSwitch />
         <NFTListings />
     </div>

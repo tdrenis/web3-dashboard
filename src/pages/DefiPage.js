@@ -5,8 +5,8 @@ import DefiSwitch from "../components/DefiSwitch";
 
 const DefiPage = () => {
   return (
-    <div className="Defi" style={{'marginTop': '-3rem'}}>
-        <DefiSwitch />
+    <div className="Defi" style={{'marginTop': '3rem'}}>
+        <DefiSwitch/>
         <Defi />
     </div>
   );

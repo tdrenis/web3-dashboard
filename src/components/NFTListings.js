@@ -22,7 +22,7 @@ const NFTListings = () => {
   );
 
   return (
-    <div className="NFTs" style={{'marginTop': '-3rem'}}>
+    <div className="NFTs" style={{'marginTop': '1rem'}}>
       <SubBar>
         <h3>Recent NFT sales on &nbsp;</h3>
         <img src={os} alt="OpenSea"/>

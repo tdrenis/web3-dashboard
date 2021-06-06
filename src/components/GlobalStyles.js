@@ -48,9 +48,6 @@ const GlobalStyles = createGlobalStyle`
         font-weight: bold;
         font-family: "Inter", sans-serif;
     }
-    .Home { 
-        padding: 5rem 0rem;
-    }
 `;
 
 export default GlobalStyles;
