@@ -65,32 +65,32 @@ const Eth = () => {
                 </SearchBar>
                 <EthDiv>
                 <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center'}}>
-                    <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'flexDirection': 'column', 'marginRight': '20px', 'background': 'rgb(39, 41, 45)', 'padding': '12px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
-                    <p>Supply</p>
-                    <p> {formatter.format(supply/1000000000000000000)}</p>
+                    <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'flexDirection': 'column', 'marginRight': '5vw', 'background': 'rgb(39, 41, 45)', 'padding': '8px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
+                        <p>Supply</p>
+                        <p> {formatter.format(supply/1000000000000000000)}</p>
                     </div>
-                    <div style={{'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'center', 'alignItems': 'center', 'background': 'rgb(39, 41, 45)', 'padding': '12px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
-                    <p style={{'marginTop': '7px'}}>Price (USD): {cFormatter.format(usd_price)} </p>
-                    <p>Price (BTC): {formatter.format(btc_price)} BTC</p>
+                    <div style={{'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'center', 'alignItems': 'center', 'background': 'rgb(39, 41, 45)', 'padding': '4px 8px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
+                        <p style={{'marginTop': '7px'}}>Price (USD): {cFormatter.format(usd_price)} </p>
+                        <p>Price (BTC): {formatter.format(btc_price)} BTC</p>
                     </div>
                 </div>
                 </EthDiv>
-                <EthDiv style={{'flexDirection': 'column', 'marginBottom': '2rem'}}>
-                <div style={{'marginBottom': '15px'}}>
+                <EthDiv style={{'flexDirection': 'column'}}>
+                <div style={{'marginBottom': '5px'}}>
                     <p>Gas (in Gwei):</p>
                 </div>
                 <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center'}}>
-                    <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'margin': '0px 14px', 'flexDirection': 'column', 'background': 'rgb(39, 41, 45)', 'padding': '6px 32px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
-                    <p style={{'color': '#f3a181'}}>Slow</p>
-                    <p>{slowGas} </p>
+                    <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'margin': '0px 2vw', 'flexDirection': 'column', 'background': 'rgb(39, 41, 45)', 'padding': '0px 32px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
+                        <p style={{'color': '#f3a181'}}>Slow</p>
+                        <p>{slowGas} </p>
                     </div>
-                    <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'margin': '0px 14px', 'flexDirection': 'column', 'background': 'rgb(39, 41, 45)', 'padding': '6px 32px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
-                    <p style={{'color': '#f8ff92'}}>Normal</p>
-                    <p>{normalGas} </p>
+                    <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'margin': '0px 2vw', 'flexDirection': 'column', 'background': 'rgb(39, 41, 45)', 'padding': '0px 32px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
+                        <p style={{'color': '#f8ff92'}}>Normal</p>
+                        <p>{normalGas} </p>
                     </div>
-                    <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'margin': '0px 14px', 'flexDirection': 'column', 'background': 'rgb(39, 41, 45)', 'padding': '6px 32px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
-                    <p style={{'color': '#8bf57d'}}>Fast</p>
-                    <p>{fastGas} </p>
+                    <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'margin': '0px 2vw', 'flexDirection': 'column', 'background': 'rgb(39, 41, 45)', 'padding': '0px 32px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
+                        <p style={{'color': '#8bf57d'}}>Fast</p>
+                        <p>{fastGas} </p>
                     </div>
                 </div>
                 </EthDiv>
@@ -129,7 +129,7 @@ const SearchBar = styled(motion.div)`
   button {
     font-size: 16px;
     border: none;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1.5rem;
     cursor: pointer;
     background: rgb(31, 33, 36);
     color: white;
@@ -142,7 +142,7 @@ const SearchBar = styled(motion.div)`
 `;
 
 const EthDiv = styled(motion.div)`
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,7 +152,7 @@ const EthDiv = styled(motion.div)`
   box-shadow: 0px 5px 20px rgba(31, 33, 36, 0.4);
   border: 0px solid rgb(88, 91, 104);
   width: 90vw;
-  max-width: 500px;
+  max-width: 700px;
   p { 
     font-size: 18px;
     color: whitesmoke;

@@ -3,10 +3,10 @@ import React from "react";
 import HomePage from "./pages/HomePage";
 import DefiPage from "./pages/DefiPage";
 import NFTPage from "./pages/NFTPage";
+// Components 
+import Nav from "./components/Nav";
 // Styling
 import GlobalStyles from "./components/GlobalStyles";
-import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
 // Routing 
 import {Route, Switch} from "react-router-dom";
 
@@ -14,11 +14,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyles />
-      <Navbar bg="light" variant="light">
-        <Container>
-          <Navbar.Brand style={{'color': 'rgb(39, 41, 45)'}}>Project</Navbar.Brand>
-        </Container>
-      </Navbar>
+      <Nav />
       <Switch>
         <Route path="/defi">
           <DefiPage />
