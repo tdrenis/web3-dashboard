@@ -5,6 +5,7 @@ const initState = {
     slowGas: '',
     normalGas: '', 
     fastGas: '',
+    balance: '',
   };
   
   const ethReducer = (state = initState, action) => {
@@ -19,6 +20,11 @@ const initState = {
           normalGas: action.payload.normalGas, 
           fastGas: action.payload.fastGas,
         };
+        case "SEARCH_ETH":
+          return {
+            ...state,
+            balance: action.payload.balance,
+          };
       default:
         return { ...state };
     }

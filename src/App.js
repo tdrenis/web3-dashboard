@@ -11,7 +11,7 @@ function App() {
       <GlobalStyles />
       <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand>Web3 Dashboard</Navbar.Brand>
+          <Navbar.Brand style={{'color': 'rgb(88, 91, 104)'}}>Web3 Dashboard</Navbar.Brand>
         </Container>
       </Navbar>
       <Home />

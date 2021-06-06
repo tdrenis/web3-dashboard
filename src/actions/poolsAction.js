@@ -26,7 +26,6 @@ export const loadPools = () => async (dispatch) => {
             `
         }
         }).then((result) => {
-            console.log(result.data);
             dispatch({
                 type: "FETCH_POOLS",
                 payload: {

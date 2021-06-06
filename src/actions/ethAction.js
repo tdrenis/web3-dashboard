@@ -3,6 +3,7 @@ import {
   gasUrl,
   priceUrl,
   supplyUrl,
+  searchUrl,
 } from "../api";
 
 //Action Creator
@@ -20,6 +21,17 @@ export const loadEth = () => async (dispatch) => {
         slowGas: gasData.data.result.SafeGasPrice,
         normalGas: gasData.data.result.ProposeGasPrice,
         fastGas: gasData.data.result.FastGasPrice,
+      },
+    });
+  };
+
+  export const searchEth = (addr) => async (dispatch) => {
+    //FETCH AXIOS
+    const balanceData = await axios.get(searchUrl(addr));
+    dispatch({
+      type: "SEARCH_ETH",
+      payload: {
+        balance: balanceData.data.result,
       },
     });
   };
