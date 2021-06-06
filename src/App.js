@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./pages/Home";
+import HomePage from "./pages/HomePage";
 // Styling
 import GlobalStyles from "./components/GlobalStyles";
 import Navbar from 'react-bootstrap/Navbar';
@@ -11,10 +11,10 @@ function App() {
       <GlobalStyles />
       <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand style={{'color': 'rgb(88, 91, 104)'}}>Web3 Dashboard</Navbar.Brand>
+          <Navbar.Brand style={{'color': 'rgb(39, 41, 45)'}}>Project</Navbar.Brand>
         </Container>
       </Navbar>
-      <Home />
+      <HomePage />
     </div>
   );
 }

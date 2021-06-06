@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
     body{
         font-family: 'Inter', sans-serif;
         width: 100%;
-        background-color: #eeeded;
+        background-color: whitesmoke;
     }
     h2{
         font-size: 3rem;
