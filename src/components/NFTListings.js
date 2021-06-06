@@ -31,16 +31,14 @@ const NFTListings = () => {
         <NFTs>
             {listings.map( (listing, idx) => (
                 <div key={idx}>
-                    {listing.asset && 
                     <NFT
-                        name={listing.asset.name ? listing.asset.name : 'Unnamed'}
+                        name={listing.asset ? (listing.asset.name ? listing.asset.name : listing.asset.collection.name + " " + listing.asset.token_id ) : ''}
                         price={listing.total_price/10**listing.payment_token.decimals}
                         token_symbol={listing.payment_token.symbol}
                         usd_equiv={listing.payment_token.usd_price}
-                        os_url={listing.asset.permalink}
-                        img_url={listing.asset.image_url}
+                        os_url={listing.asset ? listing.asset.permalink : 'https://opensea.io/'}
+                        img_url={listing.asset ? listing.asset.image_url : ''}
                     />
-                    }
                 </div>
             ))}
         </NFTs>

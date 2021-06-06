@@ -14,7 +14,7 @@ const Footer = () => {
             <p>GitHub</p>
           </div>
       </a>
-      <h7>Built by Tommy Drenis</h7>
+      <h6>Built by Tommy Drenis</h6>
     </FooterContainer>
   );
 };

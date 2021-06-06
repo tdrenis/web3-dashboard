@@ -45,7 +45,7 @@ const Eth = () => {
             <OuterDiv>
                 <SearchBar>
                     <h5>Read the Ether balance of any Ethereum address</h5>
-                    <h7>View Vitalik Buterin's balance as an example at</h7>
+                    <h6>View Vitalik Buterin's balance as an example at</h6>
                     <h6>0xd8da6bf26964af9d7eed9e03e53415d37aa96045</h6>
                     <form className="search">
                     <input value={textInput} onChange={inputHandler} type="text" />
