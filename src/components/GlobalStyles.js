@@ -41,6 +41,9 @@ const GlobalStyles = createGlobalStyle`
         text-decoration: none !important;
         color: rgb(39, 41, 45);
     }
+    a:hover { 
+        color: rgb(88, 91, 104);
+    }
     img{
         display: block;
     }

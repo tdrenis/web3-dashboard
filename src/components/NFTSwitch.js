@@ -37,9 +37,6 @@ const Switch = styled(motion.div)`
     font-size: 18px;
     padding: 2px 12px;
   }
-  a:hover { 
-    color: rgb(88, 91, 104);
-  }
   .second { 
     background: white;
     border-radius: 30px;
