@@ -18,35 +18,35 @@ const GlobalStyles = createGlobalStyle`
         }
     }
     body{
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Inter', sans-serif;
         width: 100%;
-        background-color: rgb(29,29,29);
+        background-color: #eeeded;
     }
     h2{
         font-size: 3rem;
         font-weight: lighter;
-        color: whitesmoke;
+        color: rgb(39, 41, 45);
     }
     h3{
         font-size: 1.3rem;
-        color: whitesmoke;
+        color: rgb(39, 41, 45);
         padding: 1.5rem 0rem;
     }
     p{
         font-size: 1.2rem;
         line-height: 200%;
-        color: #696969;
+        color: rgb(39, 41, 45);
     }
     a{
-        text-decoration: none;
-        color: whitesmoke;
+        text-decoration: none !important;
+        color: rgb(39, 41, 45);
     }
     img{
         display: block;
     }
     input{
         font-weight: bold;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Inter", sans-serif;
     }
     .Home { 
         padding: 5rem 0rem;

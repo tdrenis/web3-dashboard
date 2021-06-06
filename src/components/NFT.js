@@ -20,12 +20,12 @@ const NFT = ({ name, price, token_symbol, usd_equiv, os_url, img_url }) => {
 
 const StyledNFT = styled(motion.div)`
   min-height: 30vh;
-  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.025);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
-  background: rgb(44, 44, 44);
+  background: whitesmoke;
   .image-container { 
     display: flex;
     justify-content: center;
@@ -44,7 +44,7 @@ const StyledNFT = styled(motion.div)`
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
-    color: #c0c0c0;
+    color: rgb(39, 41, 45);
   }
   .name { 
       padding: 10px 0px;

@@ -4,6 +4,7 @@ import NFT from "../components/NFT";
 // Images
 import os from "../img/os-logo.png";
 import uni from "../img/uni-logo.png";
+import eth from "../img/eth-logo.png";
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 import { loadListings } from "../actions/listingsAction";
@@ -27,15 +28,16 @@ const useStyles = makeStyles({
     }, 
     tableContainer: { 
         maxWidth: 750,
-        backgroundColor: 'pink',
-        border: '5px solid #ff8ec4',
-        borderRadius: '10px',
-        boxShadow: '0px 5px 20px rgba(255, 255, 255, 0.15)',
+        backgroundColor: 'rgb(250, 215, 232)',
+        borderRadius: '15px',
+        border: '0px solid rgb(290, 0, 119)',
+        boxShadow: '0px 5px 20px rgba(290, 0, 119, 0.4)',
+        margin: '0rem 2rem',
     },
     tableCell: {
-        color: '#424242',
-        fontSize: '16px',
-        borderBlockColor: '#ffcbe4',
+        color: 'rgb(39, 41, 45)',
+        fontSize: '16px', 
+        borderBlockColor: 'rgb(250, 235, 242)',
     },
 });
 
@@ -71,16 +73,43 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <TopBar>
-        <h1>Web3 Dashboard</h1>
-      </TopBar>
-      <h1>eth supply: {formatter.format(supply/1000000000000000000)}</h1>
-      <h1>eth price (usd): {cFormatter.format(usd_price)} </h1>
-      <h1>eth price (btc): {cFormatter.format(btc_price)} </h1>
-      <h1>gas (in gwei):</h1>
-      <h1>slow: {slowGas} </h1>
-      <h1>normal: {normalGas} </h1>
-      <h1>fast: {fastGas} </h1>
+      <SubBar style={{'marginTop': '-2rem'}}>
+        <img src={eth} alt=""/>
+        <h3>Ethereum Snapshot</h3>
+      </SubBar>
+      <OuterDiv>
+        <EthDiv>
+          <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center'}}>
+            <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'flexDirection': 'column', 'marginRight': '20px', 'background': 'rgb(39, 41, 45)', 'padding': '12px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
+              <p>Supply</p>
+              <p> {formatter.format(supply/1000000000000000000)}</p>
+            </div>
+            <div style={{'display': 'flex', 'flex-direction': 'column', 'justifyContent': 'center', 'alignItems': 'center', 'background': 'rgb(39, 41, 45)', 'padding': '12px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
+              <p style={{'marginTop': '7px'}}>Price (USD): {cFormatter.format(usd_price)} </p>
+              <p>Price (BTC): {formatter.format(btc_price)} BTC</p>
+            </div>
+          </div>
+        </EthDiv>
+        <EthDiv style={{'flexDirection': 'column', 'marginBottom': '2rem'}}>
+          <div style={{'marginBottom': '15px'}}>
+            <p>Gas (in Gwei):</p>
+          </div>
+          <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center'}}>
+            <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'margin': '0px 20px', 'flexDirection': 'column', 'background': 'rgb(39, 41, 45)', 'padding': '6px 28px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
+              <p style={{'color': '#f38181'}}>Slow</p>
+              <p>{slowGas} </p>
+            </div>
+            <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'margin': '0px 20px', 'flexDirection': 'column', 'background': 'rgb(39, 41, 45)', 'padding': '6px 28px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
+              <p style={{'color': '#f8ff92'}}>Normal</p>
+              <p>{normalGas} </p>
+            </div>
+            <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'margin': '0px 20px', 'flexDirection': 'column', 'background': 'rgb(39, 41, 45)', 'padding': '6px 28px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
+              <p style={{'color': '#8bf57d'}}>Fast</p>
+              <p>{fastGas} </p>
+            </div>
+          </div>
+        </EthDiv>
+      </OuterDiv>
       <SubBar>
         <h3>Top liquidity pools on &nbsp;</h3>
         <img src={uni} alt="OpenSea"/>
@@ -133,17 +162,6 @@ const Home = () => {
   );
 }
 
-const TopBar = styled(motion.div)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 2rem;
-  h1 { 
-      font-weight: lighter;
-      color: whitesmoke;
-  }
-`;
-
 const SubBar = styled(motion.div)`
   display: flex;
   align-items: center;
@@ -153,10 +171,40 @@ const SubBar = styled(motion.div)`
   }
   h3 { 
       font-weight: lighter;
+      margin-top: 7px;
   }
 `;
 
+const EthDiv = styled(motion.div)`
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7px;
+  background: rgb(31, 33, 36);
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px rgba(31, 33, 36, 0.4);
+  border: 0px solid rgb(88, 91, 104);
+  width: 90vw;
+  max-width: 500px;
+  p { 
+    font-size: 18px;
+    color: whitesmoke;
+  }
+`
+
+const OuterDiv = styled(motion.div)`
+  padding: 1rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  margin: 0vw 10vw;
+`;
+
 const TableDiv = styled(motion.div)`
+  padding: 1rem 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
