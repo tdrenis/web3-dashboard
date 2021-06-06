@@ -66,7 +66,7 @@ const Eth = () => {
                 <EthDiv>
                 <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center'}}>
                     <div style={{'display': 'flex', 'justifyContent': 'center', 'alignItems': 'center', 'flexDirection': 'column', 'marginRight': '5vw', 'background': 'rgb(39, 41, 45)', 'padding': '8px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
-                        <p>Supply</p>
+                        <p>Ether Supply</p>
                         <p> {formatter.format(supply/1000000000000000000)}</p>
                     </div>
                     <div style={{'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'center', 'alignItems': 'center', 'background': 'rgb(39, 41, 45)', 'padding': '4px 8px', 'borderRadius': '10px', 'border': '2px solid rgb(88, 91, 104)'}}>
